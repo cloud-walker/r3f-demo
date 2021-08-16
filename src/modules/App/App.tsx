@@ -25,7 +25,7 @@ function Box(props: MeshProps) {
   const [hovered, setHover] = React.useState(false)
 
   // Subscribe this component to the render-loop, rotate the mesh every frame
-  useFrame((state, delta) => {
+  useFrame(() => {
     const mesh = meshRef.current
     if (mesh != null) {
       const rotationSpeed = 0.02
