@@ -32,14 +32,6 @@ export function App() {
         <Thing position={[-3, 0, -3]} />
 
         <OrbitControls autoRotate />
-
-        {/* <Frame
-          onFrame={(state, delta) => {
-            state.camera.rotation.z +=
-              50 + Math.sin(state.clock.getElapsedTime())
-            // state.camera.rotation.x += state.clock.getElapsedTime()
-          }}
-        /> */}
       </Canvas>
     </div>
   )
