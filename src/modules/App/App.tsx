@@ -37,23 +37,13 @@ export function App() {
   )
 }
 
-function Frame({
-  onFrame,
-}: {
-  onFrame: (state: RootState, delta: number) => void
-}) {
-  useFrame(onFrame)
-
-  return null
-}
-
 function Thing(props: MeshProps) {
   const meshRef = React.useRef<THREE.Mesh>()
   const [active, setActive] = React.useState(false)
   const [hovered, setHover] = React.useState(false)
 
   // Subscribe this component to the render-loop, rotate the mesh every frame
-  useFrame(state => {
+  useFrame((state) => {
     const mesh = meshRef.current
     if (mesh != null) {
       const elapsedTime = state.clock.getElapsedTime()
